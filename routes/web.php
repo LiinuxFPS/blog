@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PrincipalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+///Route::get('/nome-da-rota','NomeController@função');
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/','PrincipalController@principal');
+Route::get('/contato', function () {
+    return 'Contato';
+});
+Route::get('/sobre', function () {
+    return 'Sobre-nos';
 });
