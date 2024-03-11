@@ -16,9 +16,5 @@ use Illuminate\Support\Facades\Route;
 ///Route::get('/nome-da-rota','NomeController@função');
 
 Route::get('/','PrincipalController@principal');
-Route::get('/contato', function () {
-    return 'Contato';
-});
-Route::get('/sobre', function () {
-    return 'Sobre-nos';
-});
+Route::get('/sobre-nos','SobreNosController@sobreNos');
+Route::get('/contato','ContatoController@contato');
