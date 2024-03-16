@@ -2,15 +2,19 @@
 {{-- AQUI TEM UM COMENTARIO --}}
 
 {{--@dd($fornecedores)--}}
-
 {{--
     if(isset($variavel)){} //retorna true se a variavel estiver definada
+    @empty($variavel) //retorna true se a variavel vazio
 --}}
 @isset($fornecedores)
     Fornecedores: {{$fornecedores[0]['nome']}}
     <br>
     Status: {{$fornecedores[0]['status']}}
-    <br>    
+    <br> 
+    CNPJ: {{$fornecedores[0]['cnpj']}}
+    @empty($fornecedores[0]['cnpj'])
+        -vazio
+    @endempty 
 @endisset
 
 <br>
