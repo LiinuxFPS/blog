@@ -8,6 +8,35 @@
 --}}
 @isset($fornecedores)
 
+    @foreach($fornecedores as $indice => $fornecedor)
+    Fornecedores: {{$fornecedor['nome']}}
+    <br>
+    Status: {{$fornecedor['status']}}
+    <br>
+    CNPJ: {{$fornecedor['cnpj']}}
+    <br>
+    Telefone: {{ $fornecedor['ddd'] ?? ''}} {{ $fornecedor['telefone'] ?? ''}}
+    <br>
+    <br>
+    @endforeach
+       
+    {{--
+    @forelse($fornecedores as $indice => $fornecedor)
+    Fornecedores: {{$fornecedor['nome']}}
+    <br>
+    Status: {{$fornecedor['status']}}
+    <br>
+    CNPJ: {{$fornecedor['cnpj']}}
+    <br>
+    Telefone: {{ $fornecedor['ddd'] ?? ''}} {{ $fornecedor['telefone'] ?? ''}}
+    <br>
+    <br>
+    @empty
+        -Não existe dados
+    @endforelse
+    --}}
+
+    {{--
     @for($i = 0; isset($fornecedores[$i]); $i++)
     Fornecedores: {{$fornecedores[$i]['nome']}}
     <br>
@@ -19,5 +48,6 @@
     <br>
     <br>
     @endfor
-    
+    --}}
+
 @endisset
